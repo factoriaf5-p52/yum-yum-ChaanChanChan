@@ -1,0 +1,26 @@
+{
+  "name": "proyecto-3-yumyum",
+  "version": "1.0.0",
+  "description": "![yum-yum](https://www.thanh-binh.fr/12533-thickbox_default/sopa-de-fideos-con-pato-yum-yum-60g-de-tailandia.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/factoriaf5-p52/yum-yum-ChaanChanChan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/factoriaf5-p52/yum-yum-ChaanChanChan/issues"
+  },
+  "homepage": "https://github.com/factoriaf5-p52/yum-yum-ChaanChanChan#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.55.0"
+  }
+}
