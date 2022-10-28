@@ -1,0 +1,42 @@
+@use 'var' as *;
+
+
+header{
+    @include flexible ( flex, row, nowrap, space-between, flex-start );
+    padding: 2rem ;
+
+    section:nth-child(1) {
+        @include flexible (flex, column, nowrap, flex-start, center);
+        p{
+            @include text ('plain', 0.8rem, $greyedText, lighter);
+            margin-top: 0.5rem;
+        }
+    }
+
+    section:nth-child(2) {
+
+        @include flexible ( flex, row, nowrap, center, center );
+        gap: 1rem;
+
+        button:nth-child(1) {
+        width: 2rem;
+        height: 2rem;
+        background-image: url(/images/hamburger.svg);
+        background-size: contain;
+        filter: invert(62%) sepia(1%) saturate(109%) hue-rotate(314deg) brightness(83%) contrast(88%);
+        }
+
+    button:nth-child(2) {
+        width: 2rem;
+        height: 2rem;
+        background-image: url(/images/cart.svg);
+        background-size: contain;
+        filter: invert(62%) sepia(1%) saturate(109%) hue-rotate(314deg) brightness(83%) contrast(88%);
+        }
+    }
+
+    
+    
+}
+
+

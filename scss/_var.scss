@@ -1,0 +1,53 @@
+// ---------------------- FONTS
+@font-face {
+    font-family: 'plain';
+    src: url(/fonts/Intro/intro-regular-webfont.woff2) format('woff2'),
+         url(/fonts/Intro/intro-regular-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'title';
+    src: url(/fonts/Intro/intro-black-webfont.woff2) format('woff2'),
+         url(/fonts/Intro/intro-black-webfont.woff) format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+
+// ---------------------- COLOR SCHEME
+$background: #ffff;
+$background2: #f5f5eb;
+
+$gradientHeader: #c0da38;
+$gradientHeader2: #74cc52;
+
+$buttonColor: #fa7344;
+$buttonColor2: #5fb038;
+
+$gradientPerk: #fa7344;
+$gradientPerk2: #ee3b51;
+
+$titleColor: #fa7344;
+$greyedText: #828282;
+
+$footerColor: #edede5;
+
+
+// ---------------------- MIXINS
+
+@mixin flexible ( $dis, $dir, $corte, $just, $align ) {
+  display         : $dis;
+  flex-flow       : $dir $corte;
+  justify-content : $just;
+  align-items     : $align;
+}
+
+@mixin text ($ff, $fs, $c, $w){
+  font-family   : $ff;
+  font-size     : $fs;
+  color         : $c;
+  font-weight   : $w;
+}
+
