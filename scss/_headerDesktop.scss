@@ -1,0 +1,16 @@
+@use 'var' as *;
+
+nav {
+    width: 60%;
+    max-width: 560px;
+    height: 3rem;
+    @include flexible (flex, row, nowrap, space-between, center);
+    @include text ('plain', 1rem, black);
+}
+
+    @media (max-width: 899px) {
+
+        nav {
+            display: none;
+        }
+    }

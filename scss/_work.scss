@@ -1,0 +1,64 @@
+@use 'var' as *;
+
+.work{
+
+    width: 100%;
+    padding: 2rem;
+    min-height: 40vh;
+
+    @include flexible (flex, column, nowrap, flex-start, space-between);
+    gap: 5rem;
+
+    h2{
+        width: 100%;
+        @include text ('title', 2rem, $titleColor);
+        text-align: center;
+    }
+}
+
+
+.work-grid{
+
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    @include grid (grid, 1fr, 10rem, center, center);
+
+    h3{
+        @include text ('plain', 1.7rem, black);
+        overflow-x: hidden;
+    }
+    
+    h3 strong{
+        @include text ('title', 1.7rem, black);
+        margin-left: 0.77rem;
+    }
+
+    article{
+        width: 100%;
+        margin: 0 auto;
+        max-width: 276px;
+        @include flexible (flex, row, nowrap, center, center);
+        
+
+        p{
+            @include text ('plain', 1rem, $greyedText);
+            margin-top: 1rem;
+            font-weight: lighter;
+        }
+
+        img {
+            width: 5rem;
+            margin-right: 2rem;
+        }
+
+    }
+
+}
+
+@media (min-width: 950px) {
+    .work-grid{
+        @include flexible (flex, row, nowrap, center, center);
+        gap: 2rem;
+    }
+}

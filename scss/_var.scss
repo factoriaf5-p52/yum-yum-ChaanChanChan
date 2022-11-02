@@ -6,6 +6,8 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
 @font-face {
     font-family: 'title';
     src: url(/fonts/Intro/intro-black-webfont.woff2) format('woff2'),
@@ -35,19 +37,38 @@ $greyedText: #828282;
 $footerColor: #edede5;
 
 
-// ---------------------- MIXINS
+// MIXIN
 
-@mixin flexible ( $dis, $dir, $corte, $just, $align ) {
+@mixin flexible ($dis, $dir, $corte, $just, $align) {
   display         : $dis;
   flex-flow       : $dir $corte;
   justify-content : $just;
   align-items     : $align;
 }
 
-@mixin text ($ff, $fs, $c, $w){
+@mixin grid ($dis, $col, $g, $just, $align){
+  display               : $dis;
+  grid-template-columns : $col;
+  gap                   : $g;
+  justify-content       : $just;
+  align-items           : $align;
+}
+
+@mixin text ($ff, $fs, $c){
   font-family   : $ff;
   font-size     : $fs;
   color         : $c;
-  font-weight   : $w;
 }
+
+@mixin button ($w, $ff, $fs, $c, $bc, $br, $p){
+  width           : $w;
+  font-family     : $ff;
+  font-size       : $fs;
+  color           : $c;
+  background-color: $bc;
+  border-radius   : $br;
+  padding         : $p;
+}
+
+
 

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="fonts/Intro/index.css">
-    <link rel="stylesheet" type="text/css" href="scss/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <title>Yum-Yum</title>
 </head>
 
@@ -19,11 +19,20 @@
             <p>Local Cuisine Delivered</p>
         </section>
 
+        <!-- NAVBAR DESKTOP -->
+        <nav id="mySidenav">
+            <a href="#home">Home</a>
+            <a href="#restaurants">Restaurants</a>
+            <a href="#offers">Offers</a>
+            <a href="#dishes">Dishes</a>
+            <a href="#cuisine">Cuisine</a>
+            <a href="#about Us">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
         <!-- BUTTONS HEADER -->
         <section class="header-button-container">
-            <button class="menu-button" onclick="openNav()"></button>
-
+            <button></button>
             <button></button>
         </section>
 
@@ -31,7 +40,7 @@
 
 
     <!-- ORDER -->
-    <section class="order">
+    <section class="order" id="home">
 
         <!-- LEFT -->
         <aside class="order-aside-left">
@@ -42,170 +51,329 @@
 
         <!-- RIGHT -->
         <aside class="order-aside-right">
-
             <h2>ORDER FROM RESTAURANTS AROUND YOU</h2>
-
             <form>
-                <button>
+                <article>
                     <img src="images/pin.svg" alt="pin-map">
-                    <input type="text">
-                </button>
-
-                <button>
+                    <input type="text" placeholder="Enter your address">
+                </article>
+                <hr>
+                <article class="article-2">
                     <img src="images/bbq.svg" alt="bbq">
-                    <input type="text">
-                </button>
-            </form>
+                    <input type="text" placeholder="What would you like to eat?">
+                </article>
 
+                <div>
+                    <button>
+                        <p>FIND A FOOD</p>
+                    </button>
+                </div>
+            </form>
         </aside>
     </section>
 
 
     <!-- WORK -->
-    <section class="work">
 
+    <main class="work">
         <h2>HOW IT WORKS?</h2>
+        <section class="work-grid">
+            <article>
+                <img src="images/map.png" alt="mapa">
+                <div class="work-text">
+                    <h3>1.<strong>SEARCH</strong></h3>
+                    <p>Quisque rutrum. Aenean imperdiet. Etiam ultrices nisi vel augue.</p>
+                </div>
+            </article>
 
-        <article>
-            <img src="images/map.png" alt="mapa">
-            <h3>1. <strong>Search</strong></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </article>
+            <article>
+                <img src="images/clipboard.png" alt="clipboard">
+                <div class="work-text">
+                    <h3>2.<strong>ORDER</strong></h3>
+                    <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.</p>
+                </div>
+            </article>
 
-        <article>
-            <img src="images/clipboard.png" alt="clipboard">
-            <h3>2. <strong>ORDER</strong></h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, aperiam.</p>
-        </article>
+            <article>
+                <img src="images/bag.png" alt="bag">
+                <div class="work-text">
+                    <h3>3.<strong>EAT</strong></h3>
+                    <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.</p>
+                </div>
+            </article>
+        </section>
+    </main>
 
-        <article>
-            <img src="images/bag.png" alt="bag">
-            <h3>3. <strong>EAT</strong></h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum.</p>
-        </article>
 
-    </section>
 
 
     <!-- DISHES -->
-    <section>
+    <section class="dishes">
         <h2>DISHES</h2>
 
-        <article>
-            <div></div>
-            <p>Pasta with Lamb Ragù: Coppa, Boston</p>
-            <small>Christine Quinlan</small>
-            <p>$ 19.95</p>
-            <button>Buy Now</button>
-            <hr>
-
-            <img src="images/star.svg" alt="star" class="star">
-            <img src="images/star.svg" alt="star" class="star">
-            <img src="images/star.svg" alt="star" class="star">
-            <img src="images/star.svg" alt="star" class="star">
-            <img src="images/star.svg" alt="star" class="star">
-
-            <small>1.679 Ratings <span>&#8250;</span></small>
-        </article>
-
-        <article>
-            <div></div>
-            <p>Pasta with Lamb Ragù: Coppa, Boston</p>
-            <small>Christine Quinlan</small>
-            <p>$ 5.99</p>
-            <button>Buy Now</button>
-            <hr>
-
-            <img src="images/star.svg" alt="star" class="star">
-            <img src="images/star.svg" alt="star" class="star">
-            <img src="images/star.svg" alt="star" class="star">
-            <img src="images/star.svg" alt="star" class="star">
-            <img src="images/star.svg" alt="star" class="star-greyed">
-
-            <small>12 Ratings <span>&#8250;</span></small>
-        </article>
-
-        <article>
-            <div></div>
-            <p>Pork Rillette Hand Pies: Olympic Provisions; Portland, OR</p>
-            <small>Joey Pepperoni's Pizza</small>
-            <p>$ 10.80</p>
-            <button>Buy Now</button>
-            <hr>
-
-            <img src="images/star.svg" alt="star" class="star">
-            <img src="images/star.svg" alt="star" class="star">
-            <img src="images/star.svg" alt="star" class="star">
-            <img src="images/star.svg" alt="star" class="star">
-            <img src="images/star.svg" alt="star" class="star-greyed">
-
-            <small>33 Ratings <span>&#8250;</span></small>
-        </article>
-
-        <!-- <article>
-                <div></div>
-                <p>Pork Rillette Hand Pies: Olympic Provisions; Portland, OR</p>
-                <small>Joey Pepperoni's Pizza</small>
-                <p>$ 10.80</p>
-                <button>Buy Now</button>
+        <main>
+            <article>
+                <div class="dishes-photo"></div>
+                <p>Pasta with Lamb Ragù: Coppa, Boston</p>
+                <small class="dishes-name">Christine Quinlan</small>
+                <section>
+                    <p>$ 19.95</p>
+                    <button>Buy Now</button>
+                </section>
                 <hr>
 
-                <img src="images/star.svg" alt="star" class="star">
-                <img src="images/star.svg" alt="star" class="star">
-                <img src="images/star.svg" alt="star" class="star">
-                <img src="images/star.svg" alt="star" class="star">
-                <img src="images/star.svg" alt="star" class="star-greyed">
+                <section>
+                    <div>
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star-greyed">
+                    </div>
+                    <small>1.679 Ratings <span>&#8250;</span></small>
+                </section>
+            </article>
 
-                <small>33 Ratings <span>&#8250;</span></small>
-            </article> -->
-
-        <!-- <article>
-                <div></div>
-                <p>Pork Rillette Hand Pies: Olympic Provisions; Portland, OR</p>
-                <small>Joey Pepperoni's Pizza</small>
-                <p>$ 10.80</p>
-                <button>Buy Now</button>
+            <article>
+                <div class="dishes-photo"></div>
+                <p>Pasta with Lamb Ragù: Coppa, Boston</p>
+                <small class="dishes-name">Christine Quinlan</small>
+                <section>
+                    <p>$ 5.99</p>
+                    <button>Buy Now</button>
+                </section>
                 <hr>
 
-                <img src="images/star.svg" alt="star" class="star">
-                <img src="images/star.svg" alt="star" class="star">
-                <img src="images/star.svg" alt="star" class="star">
-                <img src="images/star.svg" alt="star" class="star">
-                <img src="images/star.svg" alt="star" class="star-greyed">
+                <section class="rating">
+                    <div>
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star-greyed">
+                    </div>
+                    <small>150 Ratings <span>&#8250;</span></small>
+                </section>
 
-                <small>33 Ratings <span>&#8250;</span></small>
-            </article> -->
+            </article>
+
+            <article>
+                <div class="dishes-photo"></div>
+                <p>Pork Rillette Hand Pies: Olympic Provisions; Portland, OR</p>
+                <small class="dishes-name">Joey Pepperoni's Pizza</small>
+                <section>
+                    <p>$ 10.80</p>
+                    <button>Buy Now</button>
+                </section>
+                <hr>
+
+                <section class="rating">
+                    <div>
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star-greyed">
+                    </div>
+                    <small>753 Ratings <span>&#8250;</span></small>
+                </section>
+            </article>
+
+            <article class="dishes-article-desktop">
+                <div class="dishes-photo"></div>
+                <p>Pork Rillette Hand Pies: Olympic Provisions; Portland, OR</p>
+                <small class="dishes-name">Joey Pepperoni's Pizza</small>
+                <section>
+                    <p>$ 5.99</p>
+                    <button>Buy Now</button>
+                </section>
+                <hr>
+
+                <section class="rating">
+                    <div>
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star-greyed">
+                    </div>
+                    <small>4.831 Ratings <span>&#8250;</span></small>
+                </section>
+            </article>
+
+            <article class="dishes-article-desktop">
+                <div class="dishes-photo"></div>
+                <p>Pork Rillette Hand Pies: Olympic Provisions; Portland, OR</p>
+                <small class="dishes-name">Joey Pepperoni's Pizza</small>
+                <section>
+                    <p>$ 5.99</p>
+                    <button>Buy Now</button>
+                </section>
+                <hr>
+
+                <section class="rating">
+                    <div>
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star-greyed">
+                    </div>
+                    <small>623 Ratings <span>&#8250;</span></small>
+                </section>
+            </article>
+
+            <article class="dishes-article-desktop">
+                <div class="dishes-photo"></div>
+                <p>Pork Rillette Hand Pies: Olympic Provisions; Portland, OR</p>
+                <small class="dishes-name">Joey Pepperoni's Pizza</small>
+                <section>
+                    <p>$ 9.99</p>
+                    <button>Buy Now</button>
+                </section>
+                <hr>
+
+                <section class="rating">
+                    <div>
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star-greyed">
+                    </div>
+                    <small>1.679 Ratings <span>&#8250;</span></small>
+                </section>
+            </article>
+
+            <article class="dishes-article-desktop">
+                <div class="dishes-photo"></div>
+                <p>Pork Rillette Hand Pies: Olympic Provisions; Portland, OR</p>
+                <small class="dishes-name">Joey Pepperoni's Pizza</small>
+                <section>
+                    <p>$ 5.99</p>
+                    <button>Buy Now</button>
+                </section>
+                <hr>
+
+                <section class="rating">
+                    <div>
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star-greyed">
+                        <img src="images/star.svg" alt="star" class="star-greyed">
+                    </div>
+                    <small>1.679 Ratings <span>&#8250;</span></small>
+                </section>
+            </article>
+
+            <article class="dishes-article-desktop">
+                <div class="dishes-photo"></div>
+                <p>Pork Rillette Hand Pies: Olympic Provisions; Portland, OR</p>
+                <small class="dishes-name">Joey Pepperoni's Pizza</small>
+                <section>
+                    <p>$ 5.99</p>
+                    <button>Buy Now</button>
+                </section>
+                <hr>
+
+                <section class="rating">
+                    <div>
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star-greyed">
+                        <img src="images/star.svg" alt="star" class="star-greyed">
+                        <img src="images/star.svg" alt="star" class="star-greyed">
+                    </div>
+                    <small>159 Ratings <span>&#8250;</span></small>
+                </section>
+            </article>
+
+            <article class="dishes-article-desktop">
+                <div class="dishes-photo"></div>
+                <p>Pork Rillette Hand Pies: Olympic Provisions; Portland, OR</p>
+                <small class="dishes-name">Joey Pepperoni's Pizza</small>
+                <section>
+                    <p>$ 9.99</p>
+                    <button>Buy Now</button>
+                </section>
+                <hr>
+
+                <section class="rating">
+                    <div>
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star-greyed">
+                    </div>
+                    <small>2.649 Ratings <span>&#8250;</span></small>
+                </section>
+            </article>
+
+            <article class="dishes-article-desktop">
+                <div class="dishes-photo"></div>
+                <p>Pork Rillette Hand Pies: Olympic Provisions; Portland, OR</p>
+                <small class="dishes-name">Joey Pepperoni's Pizza</small>
+                <section>
+                    <p>$ 9.99</p>
+                    <button>Buy Now</button>
+                </section>
+                <hr>
+
+                <section class="rating">
+                    <div>
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star">
+                        <img src="images/star.svg" alt="star" class="star-greyed">
+                    </div>
+                    <small>79 Ratings <span>&#8250;</span></small>
+                </section>
+            </article>
+        </main>
+
     </section>
 
 
     <!-- PERKS -->
     <section class="perk">
         <article class="perk-element">
-            <img src="images/phone.svg" alt="pollo asado">
+            <div>
+                <img src="images/phone.svg" alt="pollo asado">
+            </div>
             <h3>EASY ONLINE</h3>
             <p>Discovery new places - order your usual and throw away those paper</p>
         </article>
 
         <article class="perk-element">
-            <img src="images/chicken.svg" alt="porcentaje">
+            <div>
+                <img src="images/chicken.svg" alt="porcentaje">
+            </div>
             <h3>1200+ MENUS</h3>
             <p>Get exclusive offers and save on your delivery favorites</p>
         </article>
 
         <article class="perk-element">
-            <img src="images/percent.svg" alt="movil">
-            <h3>DISCOUNTS$DEALS</h3>
+            <div>
+                <img src="images/percent.svg" alt="movil">
+            </div>
+            <h3>DISCOUNTS & DEALS</h3>
             <p>On-the-go? Che out our conveniant apps for iOS</p>
         </article>
 
         <article class="perk-element">
-            <img src="images/mobile.svg" alt="movil">
+            <div>
+                <img src="images/mobile.svg" alt="movil">
+            </div>
             <h3>ANYTIME, ANYWHER</h3>
             <p>On-the-go? Che out our conveniant apps for iOS</p>
         </article>
     </section>
 
 
+    <!-- RESTAURANT -->
     <section class="restaurant">
         <h2>RESTAURANT BY CUISINE</h2>
 
@@ -349,7 +517,7 @@
 
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 
 </html>

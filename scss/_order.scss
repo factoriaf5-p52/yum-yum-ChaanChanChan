@@ -1,19 +1,114 @@
 @use 'var' as *;
 
 .order{
-
     @include flexible (flex, column, nowrap, center, center);
 
     aside:nth-child(1){
+        @include flexible (flex, column, nowrap, center, center);
         width: 100%;
-        height: 30vh;
+        height: 50vh;
         background-color: #9999;
     }
 
     aside:nth-child(2){
+        @include flexible (flex, column, nowrap, flex-start, center);
+        @include text ('title', 2rem, white);
+        text-align: center;
         width: 100%;
-        height: 30vh;
+        height: 50vh;
+        min-height: 460px;
         background: rgb(192,218,56);
-        background: linear-gradient(180deg, rgba(192,218,56,1) 0%, rgba(116,204,82,1) 100%);
+        background: linear-gradient(160deg, rgba(192,218,56,1) 0%, rgba(116,204,82,1) 100%);
+
+        h2{
+            margin-top: 0.5rem;
+            padding: 1rem;
+        }
+
+        // ARTICLES
+        article{
+            @include flexible (flex, row, nowrap, flex-start, center);
+            width: 80vw;
+            background-color: white;
+        }
+
+        article:nth-of-type(1){
+            border-radius: 0.5rem 0.5rem 0 0;
+            input{
+                border-radius: 0.5rem;
+            }
+        }
+
+        article:nth-of-type(2){
+            border-radius: 0 0 0.5rem 0.5rem;
+            input{
+                border-radius: 0.5rem;
+            }
+        }
+
+        img{
+            width: 2rem;
+            margin: 0 1rem 0 1rem;
+            filter: invert(71%) sepia(45%) saturate(6529%) hue-rotate(333deg) brightness(103%) contrast(96%);
+        }
+
+        input{
+            font-size: 1rem;
+            height: 4rem;
+            width: 100%;
+            border: none;
+        }
+
+        hr{
+            color: #d0d0d099;
+            width: 70%;
+            max-width: 500px;
+        }
+    }
+
+    div{
+        @include flexible (flex, row, nowrap, flex-start, center);
+        button{
+            margin-top: 1.5rem;
+            @include button (15rem, 'title', 1.5rem, white, $buttonColor, 0.5rem, 0.5rem);
+        }
+    }
+}
+
+@media (min-width: 850px){
+    .order {
+        height: 50vh;
+        width: 100%;
+        flex-direction: row;
+
+        aside:nth-child(1){
+            width: 50%;
+        }
+
+        aside:nth-child(2){
+            width: 50%;
+            min-height: unset;
+            justify-content: center;
+            align-items: self-start;
+            gap: 2rem;
+
+            h2{
+                width: 51%;
+                text-align: left;
+                font-size: 2rem;
+                padding: 0;
+                margin-left: 2rem;
+            }
+
+            form{
+                margin-left: 2rem;
+                width: 100%;
+            }
+
+            article{
+                width: 70%;
+                max-width: 500px;
+            }
+        }
     }
 }
