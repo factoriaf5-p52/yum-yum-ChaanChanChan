@@ -1,0 +1,54 @@
+@use 'var' as *;
+
+footer{
+
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    
+
+    section:nth-child(1){
+        width: 100%;
+        padding: 0 5% 0 5%;
+        @include grid (grid, repeat(auto-fit, minmax(min(100%, 12rem), 1fr)), 2rem, center, center);
+        margin: 3rem 0 3rem 0;
+
+        article{
+            @include flexible (flex, column, nowrap, left, flex-start);
+            height: 10rem;
+
+            h4{
+                @include text ('title', 1rem, bold, black);
+                margin-bottom: 1rem;
+            }
+
+            small{
+                @include text ('Lato', 1rem, 400, $greyedText);
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    
+    section:nth-child(2){
+        width: 100%;
+        height: 3rem;
+        @include flexible (flex, row, nowrap, space-between, center);
+        padding: 1rem 4rem 1rem 4rem;
+        background-color: $background2;
+
+        small{
+            @include text ('Lato', 0.7rem, 400, $greyedText);
+        }
+    }
+    
+}
+
+@media (max-width: 520px){
+    footer{
+        section:nth-child(2){
+            padding: 1rem;
+            height: 4rem;
+            flex-wrap: wrap;
+        }
+    }
+}
