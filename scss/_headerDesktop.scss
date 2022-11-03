@@ -5,7 +5,7 @@ nav {
     max-width: 560px;
     height: 3rem;
     @include flexible (flex, row, nowrap, space-between, center);
-    @include text ('plain', 1rem, black);
+    @include text ('Lato', 1rem, 400, black);
 }
 
     @media (max-width: 899px) {

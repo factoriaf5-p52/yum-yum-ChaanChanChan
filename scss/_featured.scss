@@ -1,0 +1,162 @@
+@use 'var' as *;
+
+.featured{
+    width: 100%;
+    margin: 0 auto;
+    background-color: $background2;
+    @include flexible (flex, column, nowrap, center, center);
+
+    h2{
+        @include text ('title-bold', 2rem, bold, $titleColor);
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    main{
+        width: 90%;
+        max-width: 1600px;
+        margin: 0 auto;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        @include grid (grid, repeat(auto-fill, minmax(min(100%, 18rem), 1fr)), 2rem, center, center);
+        
+        article {
+            width: 100%;
+            max-width: 400px;
+            height: 25rem;
+            border-radius: 0.5rem;
+            background-color: white;
+            margin: 0 auto;
+            @include flexible (flex, column, nowrap, space-between, space-evenly);
+
+            .featured-photo{
+                width: 100%;
+                height: 50%;
+                background-color: #d0d0d099;
+                border-radius: 0.5rem 0.5rem 0 0;
+                
+            }
+
+            .featured-ribbon{
+                margin-top: -1.3rem;
+            }
+
+            // TEXT
+            p, small, button{
+                margin-left: 1rem;
+                // PREVENTS TEXT FROM JUMPING TO A NEW LINE
+                white-space: nowrap;
+            }
+
+            p{
+                @include text ('Lato', 1rem, 400, black);
+                text-align: left;
+                margin-bottom: -1rem;
+            }
+            
+            small{
+                height: fit-content;
+                @include text ('Lato', 0.9rem, 400, $greyedText);
+            }
+            
+            // BUTTONS
+            section:nth-of-type(1){
+                width: 100%;
+
+                @include flexible (flex, row, nowrap, left, center);
+                gap: 3rem;
+
+                div{
+                    background-color: aqua;
+                    width: 100%;
+                }   
+                button{
+                    @include button (6rem, 'Lato', 0.8rem, white, $buttonColor2, 0.3rem, 0.5rem);
+                    font-style: italic;
+                    font-weight: bold;
+                }
+            }
+
+
+            // RATING
+            hr{
+                color: #d0d0d055;
+                width: 100%;
+            }
+
+            section:nth-of-type(2){
+
+                width: 90%;
+                border-radius: 0 0 0.5rem 0.5rem;
+                padding: 0.5rem;
+                @include flexible (flex, row, nowrap, left, center);
+                gap: 2.5rem;
+
+                div{
+                    min-width: 112px;
+                }
+                
+                img{
+                    width: 1.2rem;
+                    margin-top: 2px;
+                }
+
+                .star-greyed{
+                    filter: invert(54%) sepia(1%) saturate(0%) hue-rotate(355deg) brightness(95%) contrast(50%);
+                }
+            }
+        }
+    }
+
+
+    // RIBBON: SOLO DIOS SABE COMO FUNCIONA ESTO, NO ME PREGUNTES
+    .ribbon {
+        --d:6px;  /* folded part */
+        --c:white; /* color */
+        --f:16px; /* ribbon font-size */
+        position: relative;
+        font-family: 'Lato';
+        font-weight: bold;
+    }
+    .ribbon::before {
+        content: attr(data-ribbon);
+        font-size:var(--f);
+
+        /* I : position & coloration */
+        position: absolute;
+        color: white;
+        top: 0;
+        left:0;
+        right:auto;
+        transform: translate(-29.29%, -100%) rotate(-45deg);
+        transform-origin: bottom right;
+        padding: 5px 35px calc(var(--d) + 5px);
+        background: linear-gradient(rgba(0,0,0,0.5) 0 0) bottom/100% var(--d) no-repeat var(--c);
+
+        /* II : clipping */
+        clip-path: polygon(0 0,100% 0,100% 100%,calc(100% - var(--d)) calc(100% - var(--d)),var(--d) calc(100% - var(--d)) , 0 100%);
+
+        /* III : masking */
+        -webkit-mask: 
+            linear-gradient( 135deg, transparent calc(50% - var(--d)*0.707),#fff 0) bottom left,
+            linear-gradient(-135deg, transparent calc(50% - var(--d)*0.707),#fff 0) bottom right;
+        -webkit-mask-size:300vmax 300vmax;
+        -webkit-mask-composite: destination-in;
+        mask-composite: intersect;
+    }
+
+
+    // MEADIA QUERIES
+
+    .featured-element-desktop{
+        display: none;
+    }
+
+    @media (min-width: 658px){
+
+        .featured-element-desktop{
+            display: flex;
+        }
+    }
+
+}

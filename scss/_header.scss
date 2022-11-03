@@ -7,10 +7,11 @@ header{
     padding: 2rem ;
 
     section:nth-child(1) {
-        @include flexible (flex, column, nowrap, flex-start, center);
+        @include flexible (flex, column, nowrap, right, center);
         p{
-            @include text ('plain', 0.8rem, $greyedText);
+            @include text ('Lato', 0.8rem, 400, $greyedText);
             margin-top: 0.5rem;
+            margin-left: -1rem;
         }
     }
 

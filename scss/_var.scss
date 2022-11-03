@@ -1,6 +1,6 @@
-// ---------------------- FONTS
+// FONTS
 @font-face {
-    font-family: 'plain';
+    font-family: 'title';
     src: url(/fonts/Intro/intro-regular-webfont.woff2) format('woff2'),
          url(/fonts/Intro/intro-regular-webfont.woff) format('woff');
     font-weight: normal;
@@ -9,12 +9,14 @@
 
 
 @font-face {
-    font-family: 'title';
+    font-family: 'title-bold';
     src: url(/fonts/Intro/intro-black-webfont.woff2) format('woff2'),
          url(/fonts/Intro/intro-black-webfont.woff) format('woff');
     font-weight: 900;
     font-style: normal;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 
 
@@ -32,7 +34,7 @@ $gradientPerk: #fa7344;
 $gradientPerk2: #ee3b51;
 
 $titleColor: #fa7344;
-$greyedText: #828282;
+$greyedText: #9d9d9d;
 
 $footerColor: #edede5;
 
@@ -54,9 +56,10 @@ $footerColor: #edede5;
   align-items           : $align;
 }
 
-@mixin text ($ff, $fs, $c){
+@mixin text ($ff, $fs, $fw, $c){
   font-family   : $ff;
   font-size     : $fs;
+  font-weight   : $fw;
   color         : $c;
 }
 

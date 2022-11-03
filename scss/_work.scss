@@ -11,7 +11,7 @@
 
     h2{
         width: 100%;
-        @include text ('title', 2rem, $titleColor);
+        @include text ('title-bold', 2rem, bold, $titleColor);
         text-align: center;
     }
 }
@@ -25,12 +25,12 @@
     @include grid (grid, 1fr, 10rem, center, center);
 
     h3{
-        @include text ('plain', 1.7rem, black);
+        @include text ('Lato', 1.7rem, 300, black);
         overflow-x: hidden;
     }
     
     h3 strong{
-        @include text ('title', 1.7rem, black);
+        @include text ('title', 1.7rem, bold, black);
         margin-left: 0.77rem;
     }
 
@@ -42,9 +42,8 @@
         
 
         p{
-            @include text ('plain', 1rem, $greyedText);
+            @include text ('Lato', 1rem, 300, $greyedText);
             margin-top: 1rem;
-            font-weight: lighter;
         }
 
         img {

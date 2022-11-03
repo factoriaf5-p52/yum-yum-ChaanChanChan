@@ -1,0 +1,72 @@
+@use 'var' as *;
+
+
+.restaurant {
+    width: 100%;
+    margin: 0 auto;
+    background-color: $background2;
+    @include flexible (flex, column, nowrap, center, center);
+
+    h2{
+        max-width: 90%;
+        @include text ('title-bold', 2rem, bold, $titleColor);
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    main{
+        width: 90%;
+        max-width: 1600px;
+        margin: 0 auto;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        @include grid (grid, repeat(auto-fill, minmax(min(100%, 18rem), 1fr)), 2rem, unset, unset);
+    }
+
+    article {
+
+        width: 100%;
+        height: 18rem;
+        border-radius: 0.5rem;
+        background-color: white;
+        margin: 0 auto;
+        @include flexible (flex, column, nowrap, space-around, center);
+
+        .restaurant-photo{
+            width: 100%;
+            height: 70%;
+            background-color: #b7b7b7;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        section{
+            
+            width: 100%;
+            height: 30%;
+            @include flexible (flex, column, nowrap, center, center);
+
+            p{
+                @include text ('Lato', 1rem, 400, black);
+                text-align: left;
+                width: 90%;
+            }
+    
+            small{
+                @include text ('Lato', 0.8rem, 400, $greyedText);
+                text-align: left;
+                width: 90%;
+            }
+        }
+
+    }
+
+    .restaurant-element-desktop{
+            display: none;
+        }
+    @media (min-width: 658px){
+
+        .restaurant-element-desktop{
+            display: flex;
+        }
+    }
+}
