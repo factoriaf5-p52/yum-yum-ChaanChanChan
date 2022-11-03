@@ -418,7 +418,7 @@ nav {
   gap: 2rem;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .perk article div:nth-of-type(1) {

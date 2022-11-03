@@ -13,7 +13,7 @@
         margin: 0 auto;
         text-align: center;
         gap: 2rem;
-        @include flexible (flex, column, nowrap, space-between, center);
+        @include flexible (flex, column, nowrap, center, center);
         
         div:nth-of-type(1){
             width: 8rem;
